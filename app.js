@@ -3,8 +3,8 @@ arrayAmigos = [];
 function adicionarAmigo() {
     let addAmigo = document.querySelector('input').value;
 
-    if (addAmigo.trim() === '') {
-        alert('Por favor, insira um nome válido.');
+    if (addAmigo.trim() === '' || /[^a-zA-Z\s]/.test(addAmigo)) {
+        alert('Por favor, insira um nome válido contendo apenas letras.');
         return;
     }
 
